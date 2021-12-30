@@ -20,7 +20,13 @@ def sendMessage():
     }
     result = push_service.notify_single_device(registration_id=token, data_message=message)
     print(result)
-
+    if result:
+        return {
+            "massage": "push"
+        }, 200
+    return {
+        "fail"
+    }, 400
 
 if __name__ == '__main__':
     app.run(debug=True)
