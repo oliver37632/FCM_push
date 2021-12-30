@@ -8,6 +8,13 @@ APIKEY = "AAAAGwXE9D0:APA91bHZncDSGBtGqifCp4mz8dF-3729qKt0GWcmu5mBcL1oESAUIAuhz-
 push_service = FCMNotification(APIKEY)
 
 
+@app.route('/')
+def ping():
+    return {
+        "message": "pong"
+    }, 200
+
+
 @app.route('/push', methods=['POST'])
 def sendMessage():
     title = request.json("title")
@@ -22,11 +29,12 @@ def sendMessage():
     print(result)
     if result:
         return {
-            "massage": "push"
+            "message": "push"
         }, 200
     return {
-        "fail"
+        "message": "fail"
     }, 400
+
 
 if __name__ == '__main__':
     app.run(debug=True)
