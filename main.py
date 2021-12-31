@@ -4,7 +4,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-push_service = FCMNotification("AAAAGwXE9D0:APA91bGPBRbffiSYqFFLpYiIUDFFDBiT_uwTXkelWydm3zWnzQN-NopZ6fgbKohBOvvZ9Bb7ZSRWDDzGColVJuNjFoG1Ra-M_Xxm5jY3K38sO3WrGErueto-6P7wAXvfdBNxBUfK55x-")
+push_service = FCMNotification("AIzaSyC_kwE5cTI5efwMocHh8HIxRAA7bEowahE")
 
 @app.route('/')
 def ping():
