@@ -3,8 +3,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-
-push_service = FCMNotification("AIzaSyC_kwE5cTI5efwMocHh8HIxRAA7bEowahE")
+api_key = "AIzaSyC_kwE5cTI5efwMocHh8HIxRAA7bEowahE"
+push_service = FCMNotification(api_key)
 
 @app.route('/')
 def ping():
