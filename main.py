@@ -17,9 +17,9 @@ def ping():
 
 @app.route('/push', methods=['POST'])
 def sendMessage():
-    title = request.json("title")
-    content = request.json("content")
-    token = request.json("token")
+    title = request.json["title"]
+    content = request.json["content"]
+    token = request.json["token"]
 
     message = {
         "title": title,
