@@ -29,7 +29,7 @@ def sendMessage():
     print(result)
     if result:
         return {
-            "message": "push"
+            "message": result
         }, 200
     return {
         "message": "fail"
