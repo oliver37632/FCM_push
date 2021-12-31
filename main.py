@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 APIKEY = "AAAAGwXE9D0:APA91bHZncDSGBtGqifCp4mz8dF-3729qKt0GWcmu5mBcL1oESAUIAuhz-infW0YrxUru3PByJ7jnKURrTCWJteostlrCZbvR1nbG-CDDlKt_YtfG3OzRRoc4XtILNJqts1cEqBoelHJ"
 
-push_service = FCMNotification(APIKEY)
+push_service = FCMNotification("AAAAGwXE9D0:APA91bHZncDSGBtGqifCp4mz8dF-3729qKt0GWcmu5mBcL1oESAUIAuhz-infW0YrxUru3PByJ7jnKURrTCWJteostlrCZbvR1nbG-CDDlKt_YtfG3OzRRoc4XtILNJqts1cEqBoelHJ")
 
 
 @app.route('/')
