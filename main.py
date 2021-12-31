@@ -3,7 +3,7 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-api_key = "AIzaSyC_kwE5cTI5efwMocHh8HIxRAA7bEowahE"
+api_key = "AAAAGwXE9D0:APA91bHENucI7NBQkW5JGLSWbD4V0zyAdLprB4e7hUeQSTc3TXMF3ainy1IKMpkUSQuPLKksNRl5-5T6Q-urBgVPZhAvWNBGZFp7YT4JJ0quxqjJF2zUkYrNjeAVusoWZtLuFkxElQoK"
 push_service = FCMNotification(api_key)
 
 @app.route('/')
