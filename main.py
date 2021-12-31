@@ -3,10 +3,8 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
-APIKEY = "AAAAGwXE9D0:APA91bHZncDSGBtGqifCp4mz8dF-3729qKt0GWcmu5mBcL1oESAUIAuhz-infW0YrxUru3PByJ7jnKURrTCWJteostlrCZbvR1nbG-CDDlKt_YtfG3OzRRoc4XtILNJqts1cEqBoelHJ"
 
-push_service = FCMNotification("AAAAGwXE9D0:APA91bHZncDSGBtGqifCp4mz8dF-3729qKt0GWcmu5mBcL1oESAUIAuhz-infW0YrxUru3PByJ7jnKURrTCWJteostlrCZbvR1nbG-CDDlKt_YtfG3OzRRoc4XtILNJqts1cEqBoelHJ")
-
+push_service = FCMNotification("AAAAGwXE9D0:APA91bGPBRbffiSYqFFLpYiIUDFFDBiT_uwTXkelWydm3zWnzQN-NopZ6fgbKohBOvvZ9Bb7ZSRWDDzGColVJuNjFoG1Ra-M_Xxm5jY3K38sO3WrGErueto-6P7wAXvfdBNxBUfK55x-")
 
 @app.route('/')
 def ping():
