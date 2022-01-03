@@ -17,13 +17,13 @@ def ping():
 def sendMessage():
     title = request.json["title"]
     content = request.json["content"]
-    # token = request.json["token"]
+    token = request.json["token"]
 
     message = {
         "title": title,
         "content": content
     }
-    result = push_service.notify_single_device(topic_name="topic_name", data_message=message)
+    result = push_service.notify_single_device(registration_id=token, data_message=message)
     print(result)
     if result:
         return {
