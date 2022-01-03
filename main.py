@@ -18,9 +18,9 @@ def ping():
 def sendMessage():
     title = request.json["title"]
     content = request.json["content"]
-    token = "f7OXGZh89ETmgreDRUPOpj:APA91bGsnwOE1hLwGRuIXZHdXl8cvg0NQKENdX2QeRmk9uWsPlS5u9HLWgRV_zyB5JXKlec1zeu2_-lXr0bNWYmndCIUzllO2Uo50ZHePxbmmr1giHW2bDRQaNekObICZ36pix-g7xpM"
+    registration_ids = "eTm9kOYQXkvYoFxOyzcEwH:APA91bEC5wsYawtFRE0D6H8VqfhoWz6qweKekj8BybHXZIRPKRseH3OEwfHe4j9uMsg_zk7w1UC7UstoVv9r58GllPM-3vFb5XPQPGeTkDyycWMHCtdno9xnCu7fJSQw7AUxvapX_ChR"
 
-    result = push_service.notify_multiple_devices(registration_ids=token, message_title=title, message_body=content)
+    result = push_service.notify_multiple_devices(registration_ids=registration_ids, message_title=title, message_body=content)
     if result:
         return {
             "message": result
@@ -31,4 +31,4 @@ def sendMessage():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", debug=True)
+    app.run(debug=True)
