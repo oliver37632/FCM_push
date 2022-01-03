@@ -20,12 +20,7 @@ def sendMessage():
     content = request.json["content"]
     token = request.json["token"]
 
-    message = {
-        "title": title,
-        "content": content
-    }
-    result = push_service.notify_multiple_devices(registration_id=token, data_message=message)
-    print(result)
+    result = push_service.notify_multiple_devices(registration_ids=token, message_title=title, message_body=content)
     if result:
         return {
             "message": result
