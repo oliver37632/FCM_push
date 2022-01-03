@@ -17,7 +17,7 @@ def ping():
 def sendMessage():
     title = request.json["title"]
     content = request.json["content"]
-    token = request.json["token"]
+    # token = request.json["token"]
 
     message = {
         "title": title,
