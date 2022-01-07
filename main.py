@@ -17,9 +17,14 @@ def ping():
 @app.route('/push', methods=['POST'])
 def sendMessage():
     title = request.json["title"]
-    content = request.json["content"]
+    body = request.json["content"]
 
-    result = push_service.notify_multiple_devices(registration_ids=registration_ids, message_title=title, message_body=content)
+    message = {
+        "body": body,
+        "title": title
+    }
+
+    result = push_service.notify_multiple_devices(registration_ids=registration_ids, data_message=message)
 
     return {
             "message": result
@@ -28,4 +33,8 @@ def sendMessage():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", debug=True)
+
+
+
+
 
